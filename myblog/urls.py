@@ -8,3 +8,10 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
 )
+
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.HomeView.as_view(), name='home'),
+    url(r'^admin/', include(admin.site.urls)),
+]
